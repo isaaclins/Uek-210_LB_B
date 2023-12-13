@@ -1,9 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: counter-frontend
+  name: counter-frontend-deployment
+  labels:
+    app: counter-frontend
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: counter-frontend
@@ -15,7 +17,10 @@ spec:
       containers:
         - name: counter-frontend
           image: ghcr.io/isaaclins/counter-frontend:v1
-          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
           env:
             - name: BACKEND_URL
-              value: "http://counter-backend"
+              value: https://counter-backend-route-233756-ilins1.apps.exoscale-ch-gva-2-0.appuio.cloud/
+            - name: npm_config_cache
+              value: ./.npm-cache

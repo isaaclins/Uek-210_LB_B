@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: counter-backend
+spec:
+  to:
+    kind: Service
+    name: counter-backend
+    weight: 100
+  port:
+    targetPort: 80
+  wildcardPolicy: None

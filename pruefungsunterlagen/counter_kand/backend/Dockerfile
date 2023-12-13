@@ -9,7 +9,7 @@ WORKDIR /srv/app
 COPY package.json package-lock.json ./
 
 RUN npm ci && \
-    npm install bcrypt@5.0.1 --no-save --ignore-scripts
+    npm install bcrypt@5.0.1 
 
 COPY . .
 

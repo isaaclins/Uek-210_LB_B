@@ -1,0 +1,6 @@
+- Redis ist eine in-memory DB, die in Key-Value pair speichert.
+
+- Es werden Ports 5000 Intern und 8000 extern, definiert in compose.yaml
+
+- ENV wird wird im Dockerfile verwendet, um Umgebungsvariabeln zu setzen, die dann Intern gebraucht werden können wie zb FLASK_APP=app.py oder FLASK_RUN_HOST=0.0.0.0
+

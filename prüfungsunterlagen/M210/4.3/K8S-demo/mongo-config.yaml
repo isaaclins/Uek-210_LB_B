@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-config
+data:
+  mongo-url: mongo-service
+
+# abhängigkeiten definieren (man wechselt hier was und es ändert sich überall
+# pod: Ein Container indem was läuft

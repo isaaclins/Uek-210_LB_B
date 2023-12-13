@@ -1,0 +1,6 @@
+isaac@DESKTOP-TMOK2JO:/mnt/c/Users/markus/Desktop/Github/M210/7/qotd-python/k8s$ oc get routes
+NAME        HOST/PORT                                                       PATH   SERVICES    PORT        TERMINATION     WILDCARD
+dxcker      dxcker-233756-ilins1.apps.exoscale-ch-gva-2-0.appuio.cloud             dxcker      8080-tcp    edge/Redirect   None
+m210-page   m210-page-233756-ilins1.apps.exoscale-ch-gva-2-0.appuio.cloud          m210-page   8080-tcp    edge/Redirect   None
+quotes      quotes-233756-ilins1.apps.exoscale-ch-gva-2-0.appuio.cloud             quotes      10000-tcp   edge/Redirect   None
+quotesweb   quotesweb-233756-ilins1.apps.exoscale-ch-gva-2-0.appuio.cloud          quotesweb   3000-tcp    edge/Redirect   None

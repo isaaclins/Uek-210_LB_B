@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: m210-page
+  labels:
+    app: m210
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: m210-page
+  template:
+    metadata:
+      labels:
+        app: m210-page
+    spec:
+      containers:
+      - name: m210-page
+        image: ghcr.io/isaaclins/html-page:v1
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: m210-page
+  name: m210-page
+spec:
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: m210-page
+  sessionAffinity: None
+  type: ClusterIP
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: m210-page
+  name: m210-page
+spec:
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: m210-page
+  tls:
+    termination: edge   
+    insecureEdgeTerminationPolicy: Redirect

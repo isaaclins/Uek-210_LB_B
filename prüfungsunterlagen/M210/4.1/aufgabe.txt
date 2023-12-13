@@ -1,0 +1,39 @@
+Warum braucht man Container-Orchestrierung?
+
+Skalierbarkeit: Ermöglicht das effiziente Verwalten und Skalieren von Containeranwendungen.
+Automatisierung: Automatisiert Bereitstellung, Aktualisierung und Wartung von Containern.
+Ressourcenoptimierung: Effiziente Nutzung von Ressourcen auf Hostmaschinen.
+Lastenausgleich: Verteilt den Datenverkehr gleichmäßig auf Containerinstanzen.
+Hochverfügbarkeit: Gewährleistet eine kontinuierliche Verfügbarkeit von Anwendungen.
+
+
+Wie funktioniert Container-Orchestrierung?
+
+Cluster-Management: Verwaltung von Containerclustern auf mehreren Hostmaschinen.
+Orchestrierungsalgorithmen: Koordiniert das Starten, Stoppen und Skalieren von Containern.
+Service Discovery: Automatische Erkennung und Bereitstellung von Diensten.
+Monitoring und Logging: Überwacht die Leistung und protokolliert Ereignisse für Analysen.
+
+
+Welche Container-Orchestrierung Technologien kennen Sie?
+
+Kubernetes
+Docker Swarm
+Apache Mesos
+OpenShift
+Amazon ECS (Elastic Container Service)
+
+
+Was versteht man unter "Scaling Containers"?
+
+Horizontal Scaling: Erhöhen der Anzahl von Containerinstanzen, um die Last zu bewältigen.
+Vertikales Skalieren: Anpassen der Ressourcen (CPU, RAM) für einzelne Containerinstanzen.
+
+
+Was gibt es für Deployment-Strategien?
+
+Blue-Green Deployment: Zwei Umgebungen (Blue und Green) für nahtlose Updates.
+Canary Deployment: Stufenweise Bereitstellung für ausgewählte Benutzergruppen.
+Rolling Deployment: Schrittweise Aktualisierung von Containern in der Produktionsumgebung.
+A/B Testing: Parallelbetrieb von zwei verschiedenen Versionen für Vergleichszwecke.
+Shadow Deployment: Neue Version wird parallel zur aktuellen Version getestet, ohne Traffic zu beeinflussen.

@@ -1,0 +1,84 @@
+# Container
+
+### **Container-Technologie oder Container-Virtualisierung:**
+
+Die Container-Technologie ist eine Methode der Virtualisierung auf Betriebssystemebene, bei der Anwendungen und ihre Abhängigkeiten in isolierten Containern ausgeführt werden. Jeder Container teilt sich den Betriebssystemkernel, aber hat seine eigene Laufzeitumgebung. Docker ist eines der bekanntesten Tools für die Containerisierung.
+
+### **Vor- und Nachteile der Container-Technologie im Vergleich zu virtuellen Servern (VM):**
+
+**Vorteile:**
+
+1. **Leichtgewichtiger:** Container teilen den Betriebssystemkernel, was weniger Overhead im Vergleich zu virtuellen Maschinen bedeutet.
+2. **Schnellere Bereitstellung:** Container starten schneller als VMs, da sie keine vollständigen Betriebssysteme hochfahren müssen.
+3. **Ressourceneffizient:** Container teilen Ressourcen effizienter und können mehr Instanzen pro Hardwareeinheit ausführen.
+
+**Nachteile:**
+
+1. **Isolation:** Container bieten nicht die gleiche Level an Isolation wie VMs, da sie den gleichen Kernel teilen.
+2. **Komplexität in der Orchestrierung:** Bei komplexen Anwendungen kann die Orchestrierung von Containern herausfordernd sein.
+
+### **Produkte im Zusammenhang mit virtuellen Servern und Containern:**
+
+**VMs:**
+
+- VMware
+- Hyper-V (Microsoft)
+- KVM (Kernel-based Virtual Machine)
+
+**Container:**
+
+- Docker
+- Kubernetes (für das Orchestrieren von Containern)
+- OpenShift (Container-Plattform von Red Hat)
+
+### **Unterschiede zwischen VMs und Containern:**
+
+1. **Bereitstellung:**
+    - VMs: Langsamere Bereitstellung aufgrund des Hochfahrens des gesamten Betriebssystems.
+    - Container: Schnellere Bereitstellung durch gemeinsame Nutzung des Kernel.
+2. **Speicherplatz:**
+    - VMs: Benötigen mehr Speicherplatz, da sie vollständige Betriebssysteme enthalten.
+    - Container: Benötigen weniger Speicherplatz aufgrund der gemeinsamen Nutzung von Ressourcen.
+3. **Portabilität:**
+    - VMs: Weniger portabel aufgrund von Abhängigkeiten vom Hypervisor und dem Betriebssystem.
+    - Container: Sehr portabel, da sie alle Abhängigkeiten in sich tragen.
+4. **Effizienz:**
+    - VMs: Höherer Ressourcenverbrauch aufgrund von Virtualisierungsschichten.
+    - Container: Geringerer Ressourcenverbrauch durch gemeinsame Nutzung des Kernels.
+5. **Betriebssystem (Kernel):**
+    - VMs: Jede VM hat ihren eigenen Betriebssystemkernel.
+    - Container: Teilen sich den Kernel des Host-Betriebssystems.
+
+### **Können virtuelle Server immer durch Container ersetzt werden?**
+
+Nicht immer. Die Wahl zwischen VMs und Containern hängt von den spezifischen Anforderungen der Anwendung ab. VMs bieten eine höhere Isolation, was in sicherheitskritischen Umgebungen wichtig ist, während Container aufgrund ihrer Effizienz und Portabilität in vielen anderen Fällen bevorzugt werden.
+
+### **Unterschied zwischen Self-Managed und Fully Managed:**
+
+**Self-Managed:**
+
+- Benutzer ist für die Konfiguration, Wartung und Skalierung der Infrastruktur verantwortlich.
+- Mehr Kontrolle, aber auch mehr Aufwand und Verantwortung für den Benutzer.
+- Typischerweise für erfahrene Benutzer oder Unternehmen mit eigenen IT-Ressourcen.
+
+**Fully Managed:**
+
+- Serviceanbieter übernimmt die Verwaltung von Konfiguration, Wartung und Skalierung.
+- Weniger Kontrolle für den Benutzer, aber weniger Aufwand und Verantwortung.
+- Gut für Benutzer ohne tiefgreifende technische Expertise oder Unternehmen, die sich auf ihre Kernkompetenzen konzentrieren möchten.
+
+### **Wichtige Merkmale und Diskussion in der Gruppe:**
+
+**Self-Managed:**
+
+- Kontrolle über die gesamte Infrastruktur.
+- Höherer Aufwand und Ressourcenbedarf für Wartung und Skalierung.
+- Geeignet für erfahrene Benutzer mit spezifischen Anforderungen.
+
+**Fully Managed:**
+
+- Geringerer Aufwand, da der Serviceanbieter die Verwaltung übernimmt.
+- Möglicher Verlust an Kontrolle.
+- Ideal für Benutzer ohne umfassende IT-Expertise.
+
+Die Wahl zwischen Self-Managed und Fully Managed hängt von den individuellen Bedürfnissen, Ressourcen und technischen Fähigkeiten ab. In einer Gruppendiskussion könnten verschiedene Szenarien und Erfahrungen geteilt werden, um die Vor- und Nachteile besser zu verstehen und die passende Lösung für die jeweilige Situation zu finden.

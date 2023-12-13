@@ -1,0 +1,16 @@
+Um was geht es bei diesem Faktor?
+
+Die App verbindet sich mit einem bestimmten Port und reagiert auf Anfragen, ohne sich auf einen eingebauten Webserver zu verlassen. Dies ermöglicht eine unabhängige und leicht transportierbare Umsetzung von Webdiensten.
+
+
+Welches Problem löst dieser Faktor?
+
+Löst das Problem der Abhängigkeit von einem externen Webserver in der Ausführungsumgebung. 
+
+Die App wird autonom und kann ihre Dienste eigenständig bereitstellen.
+
+
+Wie wird dieser Faktor in der realen Welt umgesetzt?
+
+Port Binding bedeutet, dass die Anwendung auf einen bestimmten Port hört, z.B. auf Port 5000. Anfragen an "http://localhost:5000/" werden an die Anwendung weitergeleitet.
+Kubernetes ist ein gutes Beispiel. Jeder Container in Kubernetes kann über einen bestimmten Port erreichbar sein, und dies ermöglicht die effiziente Verteilung des Datenverkehrs auf verschiedene Instanzen derselben Anwendung.

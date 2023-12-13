@@ -17,30 +17,23 @@ spec:
           image: ghcr.io/isaaclins/counter-backend:v1
           imagePullPolicy: Always
           env:
-            - name: DB_HOST
-              valueFrom:
-                configMapKeyRef:
-                  name: counter-backend-config
-                  key: db-host
-            - name: POSTGRESQL_USER
-              valueFrom:
-                secretKeyRef:
-                  name: counter-database
-                  key: database-user
-            - name: POSTGRESQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: counter-database
-                  key: database-password
-            - name: POSTGRESQL_DATABASE
-              valueFrom:
-                secretKeyRef:
-                  name: counter-database
-                  key: database-name
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: counter-backend-config
-data:
-  db-host: "counter-database"
+          - name: DB_HOST
+            valueFrom:
+              configMapKeyRef:
+                key: db-host
+                name: counter-backend-config
+          - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                key: database-user
+                name: counter-database
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: database-password
+                name: counter-database
+          - name: DB_NAME
+            valueFrom:
+              secretKeyRef:
+                key: database-name
+                name: counter-database

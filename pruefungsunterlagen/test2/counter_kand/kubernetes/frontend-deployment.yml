@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: counter-frontend-deployment
+  labels:
+    app: counter-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: counter-frontend
+  template:
+    metadata:
+      labels:
+        app: counter-frontend
+    spec:
+      containers:
+        - name: counter-frontend
+          image: ghcr.io/modul-i-ch-109/kube_solution/counter_frontend
+          ports:
+            - containerPort: 3000
+          env:
+            - name: BACKEND_URL
+              value: https://counter-backend-route-233754-fablib.apps.exoscale-ch-gva-2-0.appuio.cloud
+            - name: npm_config_cache
+              value: ./.npm-cache

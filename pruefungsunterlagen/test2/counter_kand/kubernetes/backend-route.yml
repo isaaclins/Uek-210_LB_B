@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: counter-backend
+  name: counter-backend-route
+
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: counter-backend
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
